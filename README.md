@@ -129,4 +129,4 @@ Access admin panel *http://127.0.0.1:8000/admin/* or *http://localhost:8000/admi
 
 * [Python](https://www.python.org)
 * [django](https://www.djangoproject.com/)
-* [Flake8](http://flake8.pycqa.org)
+
