@@ -119,11 +119,7 @@ Access admin panel *http://127.0.0.1:8000/admin/* or *http://localhost:8000/admi
 
 *Note: Test cases are pending.*
 
-**For style guide enforcement (flake8)**
 
-```
-(env) $ flake8 file_path/
-```
 
 **References**
 
