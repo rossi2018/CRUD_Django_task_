@@ -153,7 +153,7 @@ Access admin panel *http://127.0.0.1:8000/admin/* or *http://localhost:8000/admi
  To deploying code on heroku use this command 
  
  ```
- git push heroku main
+ $ git push heroku main
  ```
  
 **References**
