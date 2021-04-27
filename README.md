@@ -1,10 +1,9 @@
 # CRUD_Django_task_
 Task Title: CRUD Django task (adding more functionalities to the blog)
 
-
-# django-crud
-
 This is the web application for blog where you can register,login,reset the password and logout of the blog 
+
+CRUD stands for Create, Retrieve, Update, Delete
 
 **Installation**
 
@@ -69,6 +68,11 @@ $(django101-z0e96VTa) : django-admin startproject <name of project> .
 ```
 The dot(.) will place all the file inside the current directory and if you don't give it the dot it will make a subfolder which you may nor like 
 
+After creating project the next thing to do is create an app using this command 
+
+```
+$ django-admin startapp <app name>
+```
 
 To  Launch the development server/project use this command:
 
