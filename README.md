@@ -123,10 +123,41 @@ Access admin panel *http://127.0.0.1:8000/admin/* or *http://localhost:8000/admi
 
 *Note: Test cases are pending.*
 
-
-
+ #Hosting my app on Heroku 
+ 
+ To Host the project on heroku, first i have to install heroku via CLI using snap in ubuntu os
+ ```
+ $ sudo snap install --classic heroku
+ ```
+ After installing, to verify your CLI installation, use the heroku --version command:
+ 
+ ```
+ $ heroku --version
+ ```
+ After you install the CLI, run the heroku login command
+ 
+ ```
+ $ heroku login
+ ```
+ 
+ If you’d prefer to stay in the CLI to enter your credentials, you may run heroku login -i
+ 
+ ```
+ heroku login -i
+ ```
+ Now you’re ready to create your first Heroku app:
+ ```
+ $ cd ~/myapp
+ $ heroku create
+ ```
+ To deploying code on heroku use this command 
+ 
+ ```
+ git push heroku main
+ ```
+ 
 **References**
 
 * [Python](https://www.python.org)
 * [django](https://www.djangoproject.com/)
-
+* [Heroku](https://devcenter.heroku.com/)
