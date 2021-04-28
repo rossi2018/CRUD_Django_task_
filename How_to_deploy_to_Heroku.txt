@@ -1,0 +1,67 @@
+Let get started
+Firstly, make sure your project is working on your local machine.
+Go to your settings.py file and make sure DEBUG=False
+Create a file name Procfile with no extension, make sure its created at the project root level
+make sure its not in any app folder or project folder
+Copy and paste this into the Procfile
+web:gunicorn config.wsgi --log-file -
+In my case, config is the name of the folder where my seetings.py is located, name it according to your projectname
+save and close
+Create a file called runtime.txt
+Get the version of python you running on your system with this command
+python --version
+as for me, mine was 3.9.2. write the below version into runtime.tx and save
+python-3.9.2
+Create a file and name it requirements.txt at the folder root level
+Open your terminal and make sure you are at the root folder level and type
+pip freeze > requirements.txt
+This command will collect all packages you running on your Django project and save it in requirements.txt
+Make sure you already have an account on Heroku or create one
+On your terminal type,
+heroku login -i
+Then press enter
+enter your email followed by your password and press enter
+Now, we need to install gunicorn by typing the below command to the terminal
+pip install gunicorn
+Install Django Heroku package with the below command
+pip install django-heroku
+After installation is completely done. Open your settings.py file
+Add this at the top
+import django_heroku
+Add this at the bottom of the settings.py file
+django_heroku.settings(locals())
+Note: If the django_heroku.settings is not placed on the last line of the settings file, you will encounter an error.
+Let create our Heroku application.
+Type in the below command to create the app on your terminal.
+heroku create app_name
+Example: app_name can be blog-zuri, heroku create blog-zuri
+Then copy and paste the below command on the terminal
+heroku git:remote -a your_heroku_app_name
+Which will be as below for my app
+heroku git:remote -a zuri-blog
+Let add this app to git
+Initialize git with the below command
+git init
+Add the project to git
+git add .
+Let commit to git
+git commit -m "I just commit my first repo"
+Let push to our git remote
+git push heroku master
+If you encounter any erro then use the command below
+git push heroku head:master
+Finally, run the below command
+heroku run python manage.py migrate
+In case you encounter any error
+Type the below command
+pipenv install
+pipenv install django-heroku
+git add .
+git commit -m "Commit message"
+heroku config:set DISABLE_COLLCTSTATIC=1
+git push heroku HEAD:master
+make sure all this are present in your settings.py file
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+ALLOWED_HOSTS = ['*']
+STATICFILES_DIRS = [BASE_DIR.joinpath('static')]
+Note: Git must be install on your system to access git command
